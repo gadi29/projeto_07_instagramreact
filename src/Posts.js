@@ -39,24 +39,33 @@ function Post(props) {
 }
 
 export default function Posts() {
+    const posts = [
+        {imageUser:"./assets/img/meowed.svg",
+        user:"meowed",
+        media:"./assets/img/gato-telefone.svg",
+        userLikeImage:"./assets/img/respondeai.svg",
+        userLike:"respondeai",
+        likeNumber:"101.523"},
+        {imageUser:"./assets/img/barked.svg",
+        user:"barked",
+        media:"./assets/img/dog.svg",
+        userLikeImage:"./assets/img/adorable_animals.svg",
+        userLike:"adorable_animals",
+        likeNumber:"99.159"}
+    ];
+    
     return (
         <div class="posts">
-            <Post
-                imageUser="./assets/img/meowed.svg"
-                user="meowed"
-                media="./assets/img/gato-telefone.svg"
-                userLikeImage="./assets/img/respondeai.svg"
-                userLike="respondeai"
-                likeNumber="101.523"
-            />
-            <Post
-                imageUser="./assets/img/barked.svg"
-                user="barked"
-                media="./assets/img/dog.svg"
-                userLikeImage="./assets/img/adorable_animals.svg"
-                userLike="adorable_animals"
-                likeNumber="99.159"
-            />
+            {posts.map(post => 
+                <Post 
+                    imageUser={post.imageUser}
+                    user={post.user}
+                    media={post.media}
+                    userLikeImage={post.userLikeImage}
+                    userLike={post.userLike}
+                    likeNumber={post.likeNumber}
+                />)
+            }
         </div>
     );
 }
