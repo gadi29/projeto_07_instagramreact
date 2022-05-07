@@ -1,4 +1,24 @@
+import React from "react";
+
 function Post(props) {
+    const INITIAL_NAME = "heart-outline";
+    const LIKE_NAME = "heart";
+
+    const [iconName, setIconName] = React.useState(INITIAL_NAME);
+    const cont = 0;
+
+    function likePostMedia() {
+        setIconName(LIKE_NAME);
+    }
+
+    function likePost() {
+        if (iconName === INITIAL_NAME) {
+            setIconName(LIKE_NAME);
+        } else{
+            setIconName(INITIAL_NAME);
+        }
+    }
+
     return (
         <div class="post">
             <div class="topo">
@@ -12,13 +32,13 @@ function Post(props) {
             </div>
 
             <div class="conteudo">
-                <img src={props.media} alt="" />
+                <img src={props.media} alt="" onDoubleClick={likePostMedia}/>
             </div>
 
             <div class="fundo">
                 <div class="acoes">
                     <div>
-                        <ion-icon name="heart-outline"></ion-icon>
+                        <ion-icon name={iconName} onClick={likePost}></ion-icon>
                         <ion-icon name="chatbubble-outline"></ion-icon>
                         <ion-icon name="paper-plane-outline"></ion-icon>
                     </div>
@@ -45,13 +65,13 @@ export default function Posts() {
         media:"./assets/img/gato-telefone.svg",
         userLikeImage:"./assets/img/respondeai.svg",
         userLike:"respondeai",
-        likeNumber:"101.523"},
+        likeNumber:101.523},
         {imageUser:"./assets/img/barked.svg",
         user:"barked",
         media:"./assets/img/dog.svg",
         userLikeImage:"./assets/img/adorable_animals.svg",
         userLike:"adorable_animals",
-        likeNumber:"99.159"}
+        likeNumber:99.159}
     ];
     
     return (
