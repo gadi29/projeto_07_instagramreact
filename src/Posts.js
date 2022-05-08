@@ -5,17 +5,20 @@ function Post(props) {
     const LIKE_NAME = "heart";
 
     const [iconName, setIconName] = React.useState(INITIAL_NAME);
-    const cont = 0;
+    const [className, setClassName] = React.useState("")
 
     function likePostMedia() {
         setIconName(LIKE_NAME);
+        setClassName("like");
     }
 
     function likePost() {
         if (iconName === INITIAL_NAME) {
             setIconName(LIKE_NAME);
+            setClassName("like");
         } else{
             setIconName(INITIAL_NAME);
+            setClassName("");
         }
     }
 
@@ -38,7 +41,7 @@ function Post(props) {
             <div class="fundo">
                 <div class="acoes">
                     <div>
-                        <ion-icon name={iconName} onClick={likePost}></ion-icon>
+                        <ion-icon name={iconName} class={className} onClick={likePost}></ion-icon>
                         <ion-icon name="chatbubble-outline"></ion-icon>
                         <ion-icon name="paper-plane-outline"></ion-icon>
                     </div>
