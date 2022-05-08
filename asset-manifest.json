@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/projeto_07_instagramreact/static/js/main.21efbe4f.chunk.js",
+    "main.js.map": "/projeto_07_instagramreact/static/js/main.21efbe4f.chunk.js.map",
+    "runtime-main.js": "/projeto_07_instagramreact/static/js/runtime-main.ded7dff3.js",
+    "runtime-main.js.map": "/projeto_07_instagramreact/static/js/runtime-main.ded7dff3.js.map",
+    "static/js/2.732f33ad.chunk.js": "/projeto_07_instagramreact/static/js/2.732f33ad.chunk.js",
+    "static/js/2.732f33ad.chunk.js.map": "/projeto_07_instagramreact/static/js/2.732f33ad.chunk.js.map",
+    "index.html": "/projeto_07_instagramreact/index.html",
+    "static/js/2.732f33ad.chunk.js.LICENSE.txt": "/projeto_07_instagramreact/static/js/2.732f33ad.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ded7dff3.js",
+    "static/js/2.732f33ad.chunk.js",
+    "static/js/main.21efbe4f.chunk.js"
+  ]
+}
